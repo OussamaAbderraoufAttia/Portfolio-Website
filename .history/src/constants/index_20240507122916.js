@@ -1,7 +1,3 @@
-//import soai_logo.png
-import soai_logo from '../images/soai_logo.png';
-
-
 export const navLinks = [
   {
     id: "about",
@@ -40,7 +36,7 @@ export const experiences = [
   {
     title: "SOAI Events Deparmtment Manager",
     company_name: "School of AI | Algiers Chapter | Algeria",
-    icon: soai_logo,
+    icon: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Experiences/EduSkill.png",
     iconBg: "#161329",
     date: "Sep 2023 - Nov 2023",
     points: [

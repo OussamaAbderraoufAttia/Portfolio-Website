@@ -1,7 +1,3 @@
-//import soai_logo.png
-import soai_logo from '../images/soai_logo.png';
-
-
 export const navLinks = [
   {
     id: "about",
@@ -33,20 +29,18 @@ export const technologies = [
   { name: "Node JS", icon: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Tech/NodeJS.png" },
   { name: "Three JS", icon: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Tech/ThreeJS.png" },
   { name: "git", icon: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Tech/Git.png" },
-  
 ];
 
 export const experiences = [
   {
-    title: "SOAI Events Deparmtment Manager",
-    company_name: "School of AI | Algiers Chapter | Algeria",
-    icon: soai_logo,
+    title: "AI/ML Intern",
+    company_name: "EduSkill Foundation | AWS Academy | AICTE",
+    icon: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Experiences/EduSkill.png",
     iconBg: "#161329",
     date: "Sep 2023 - Nov 2023",
     points: [
-      "Coordinated logistics for various events including workshops, seminars, and conferences, ensuring smooth operations and timely execution.",
+      "Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.",
       "also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.",
-      "Collaborated with team members to develop innovative solutions for logistical challenges, resulting in improved event experiences."
     ],
   },
   {

@@ -1,5 +1,5 @@
 //import soai_logo.png
-import soai_logo from '../images/soai_logo.png';
+import soai_logo from '../images/soai_logo.jpg';
 
 
 export const navLinks = [
