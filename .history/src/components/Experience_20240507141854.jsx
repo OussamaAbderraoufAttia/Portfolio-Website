@@ -18,7 +18,7 @@ const ExperienceCard = ({ experience }) => (
       background: "#1d1836",
       color: "#fff",
     }}
-    contentArrowStyle={{ borderRight: "7px solid #232631" }}
+    contentArrowStyle={{ borderRight: "12px solid #232631" }}
     date={experience.date}
     iconStyle={{ background: experience.iconBg }}
     icon={
@@ -38,7 +38,7 @@ const ExperienceCard = ({ experience }) => (
       </p>
     </div>
 
-    <ul className="mt-6 list-disc ml-7 space-y-2">
+    <ul className="mt-6 list-disc ml-5 space-y-2">
       {experience.points.map((point, index) => (
         <li
           key={`experience-point-${index}`}

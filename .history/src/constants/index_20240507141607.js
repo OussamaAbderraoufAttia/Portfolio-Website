@@ -73,7 +73,6 @@ export const experiences = [
       "Developing a fully functional mobile application using Flutter, Firebase, and Google Cloud Platform, gaining hands-on experience in app development.",
       "Leading a team of 6 members in brainstorming and implementing innovative solutions for technical challenges including innovating a visual identity and a responsive web app.",
       "Doing my first ever workshop on the basics of Pascal, teaching 20+ students the fundamentals of programming and problem-solving and algorithmic thinking.",
-      "Participated in various hackathons and coding competitions, honing my problem-solving skills and gaining experience in working under pressure like Datahack."
     ],
   },
 ];

@@ -1,8 +1,6 @@
 //import soai_logo.png
 import soai_logo from '../images/soai_logo.png';
 import gdg_logo from '../images/gdg_logo.png';
-import cse_logo from '../images/cse_logo.png';
-
 
 export const navLinks = [
   {
@@ -59,21 +57,20 @@ export const experiences = [
     date: "July 2023 - Present",
     points: [
       "Innovated solutions collaboratively to tackle logistical challenges, enhancing event quality.",
-      "Acquired practical skills in MERN Stack development, including React, Node.js, and MongoDB, through hands-on projects and workshops.",
-      "Guided a team of 10+ members in executing logistics for various events, ensuring seamless operations and timely execution.",
+      "Acquired practical skills in image and signal processing, including segmentation, batch processing, and spectral analysis.",
+      "Developed expertise in machine learning models for clustering, classification, and regression, and customized deep learning techniques for image classification.",
     ],
   },
   {
-    title: "CSE Club Member",
-    company_name: "Club Scientifique de l'ESI | ESI Alger | Algiers",
-    icon: cse_logo,
+    title: "Artificial Intelligence Intern",
+    company_name: "Edunet Foundation | IBM SkillsBuild | AICTE",
+    icon: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Experiences/Edunet.png",
     iconBg: "#161329",
-    date: "Nov 2021 - Present",
+    date: "July 2023 - Present",
     points: [
-      "Developing a fully functional mobile application using Flutter, Firebase, and Google Cloud Platform, gaining hands-on experience in app development.",
-      "Leading a team of 6 members in brainstorming and implementing innovative solutions for technical challenges including innovating a visual identity and a responsive web app.",
-      "Doing my first ever workshop on the basics of Pascal, teaching 20+ students the fundamentals of programming and problem-solving and algorithmic thinking.",
-      "Participated in various hackathons and coding competitions, honing my problem-solving skills and gaining experience in working under pressure like Datahack."
+      "Engineered a comprehensive Mental Health Fitness Tracker ML model utilizing Python and scikit-learn.",
+      "Maximized the model's performance by refining model parameters and employing ensemble methods, yielding an outstanding accuracy percentage of 98.50%.",
+      "Leveraged 12 regression algorithms to attain precise outcomes in analyzing and predicting mental fitness levels across 150+ countries.",
     ],
   },
 ];
