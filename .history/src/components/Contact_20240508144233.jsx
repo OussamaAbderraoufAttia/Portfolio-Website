@@ -68,7 +68,7 @@ const Contact = () => {
     emailjs
       .send(
         "service_ae8wayl",
-        "template_b6fq68n",
+        "template_mf5x3bh",
         {
           from_name: form.name,
           to_name: "ATTIA Oussama Abderraouf",
