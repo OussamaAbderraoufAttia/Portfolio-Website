@@ -1,28 +1,21 @@
-//import Logos
+//import soai_logo.png
 import soai_logo from '../images/soai_logo.png';
 import gdg_logo from '../images/gdg_logo.png';
 import cse_logo from '../images/cse_logo.png';
-
-
-//import Icons
 import tf from '../images/icons/tf.png';
 import html5 from '../images/icons/html5.png';
+// import css react tailwindcss nodejs git 
 import css3 from '../images/icons/css3.png';
 import js from '../images/icons/js.png';
 import react from '../images/icons/react.png';
 import tailwindcss from '../images/icons/tailwindcss.png';
 import nodejs from '../images/icons/nodejs.png';
 import git from '../images/icons/git.png';
-import flutter from '../images/icons/flutter.png';
-
-
-
-// import projects background images
 import portfolioBackground from '../images/portfolioBackground.jpg'
 import DrManagerBackground from '../images/DrManagerBackground.png'
 import AlgeriaCoinClassification from '../images/AlgeriaCoinClassification.png'
 import DocScribe from '../images/DocScribe.png'
-import EcommerceApp from '../images/EcommerceApp.png'
+
 
 
 export const navLinks = [
@@ -48,7 +41,6 @@ export const services = [
 ];
 
 export const technologies = [
-  {name: "Flutter", icon: flutter},
   { name: "HTML 5", icon: html5 },
   { name: "CSS 3", icon: css3},
   { name: "JavaScript", icon: js },
@@ -152,17 +144,27 @@ export const projects = [
     source_code_link: "https://github.com/Imeneallouche/Doc-Talents-Website",
   },
   {
-    name: "Ecommerce App",
+    name: "CompileVortex",
     description:
-      "full-stack eCommerce app using Flutter & Firebase",
+      "Tool to automate payload creation using the Metasploit framework",
     tags: [
-      { name: "Flutter", color: "blue-text-gradient" },
-      { name: "Dart", color: "green-text-gradient" },
-      { name: "Firebase", color: "pink-text-gradient" },
+      { name: "Javascript", color: "blue-text-gradient" },
+      { name: "CSS", color: "green-text-gradient" },
+      { name: "HTML", color: "pink-text-gradient" },
     ],
-    image: EcommerceApp,
-    source_code_link: "https://github.com/OussamaAbderraoufAttia/ecommerce_app",
+    image: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Projects/CompileVortex.png",
+    source_code_link: "https://github.com/lohitkolluri/CompileVortex",
   },
-  
-    
+  {
+    name: "Sketcher",
+    description:
+      "Convert an input image to a pencil sketch using OpenCV and Matplotlib libraries.",
+    tags: [
+      { name: "OpenCV", color: "blue-text-gradient" },
+      { name: "Matplotlib", color: "green-text-gradient" },
+      { name: "Python", color: "pink-text-gradient" },
+    ],
+    image: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Projects/Sketcher.png", 
+    source_code_link: "https://github.com/lohitkolluri/SketchiFy",
+  },
 ];

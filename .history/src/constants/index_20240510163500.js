@@ -22,7 +22,7 @@ import portfolioBackground from '../images/portfolioBackground.jpg'
 import DrManagerBackground from '../images/DrManagerBackground.png'
 import AlgeriaCoinClassification from '../images/AlgeriaCoinClassification.png'
 import DocScribe from '../images/DocScribe.png'
-import EcommerceApp from '../images/EcommerceApp.png'
+
 
 
 export const navLinks = [
@@ -48,7 +48,6 @@ export const services = [
 ];
 
 export const technologies = [
-  {name: "Flutter", icon: flutter},
   { name: "HTML 5", icon: html5 },
   { name: "CSS 3", icon: css3},
   { name: "JavaScript", icon: js },
@@ -152,17 +151,27 @@ export const projects = [
     source_code_link: "https://github.com/Imeneallouche/Doc-Talents-Website",
   },
   {
-    name: "Ecommerce App",
+    name: "CompileVortex",
     description:
-      "full-stack eCommerce app using Flutter & Firebase",
+      "Tool to automate payload creation using the Metasploit framework",
     tags: [
-      { name: "Flutter", color: "blue-text-gradient" },
-      { name: "Dart", color: "green-text-gradient" },
-      { name: "Firebase", color: "pink-text-gradient" },
+      { name: "Javascript", color: "blue-text-gradient" },
+      { name: "CSS", color: "green-text-gradient" },
+      { name: "HTML", color: "pink-text-gradient" },
     ],
-    image: EcommerceApp,
-    source_code_link: "https://github.com/OussamaAbderraoufAttia/ecommerce_app",
+    image: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Projects/CompileVortex.png",
+    source_code_link: "https://github.com/lohitkolluri/CompileVortex",
   },
-  
-    
+  {
+    name: "Sketcher",
+    description:
+      "Convert an input image to a pencil sketch using OpenCV and Matplotlib libraries.",
+    tags: [
+      { name: "OpenCV", color: "blue-text-gradient" },
+      { name: "Matplotlib", color: "green-text-gradient" },
+      { name: "Python", color: "pink-text-gradient" },
+    ],
+    image: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Projects/Sketcher.png", 
+    source_code_link: "https://github.com/lohitkolluri/SketchiFy",
+  },
 ];

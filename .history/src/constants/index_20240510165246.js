@@ -163,6 +163,16 @@ export const projects = [
     image: EcommerceApp,
     source_code_link: "https://github.com/OussamaAbderraoufAttia/ecommerce_app",
   },
-  
-    
+  {
+    name: "Sketcher",
+    description:
+      "Convert an input image to a pencil sketch using OpenCV and Matplotlib libraries.",
+    tags: [
+      { name: "OpenCV", color: "blue-text-gradient" },
+      { name: "Matplotlib", color: "green-text-gradient" },
+      { name: "Python", color: "pink-text-gradient" },
+    ],
+    image: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Projects/Sketcher.png", 
+    source_code_link: "https://github.com/lohitkolluri/SketchiFy",
+  },
 ];
