@@ -12,14 +12,12 @@ import Tech from "./Tech";
 import Experience from "./Experience";
 import Works from "./Works";
 import Contact from "./Contact";
-import Services from "./Services";
 
 export {
   Hero,
   Navbar,
   About,
   Tech,
-  Services,
   Experience,
   Works,
   Contact,

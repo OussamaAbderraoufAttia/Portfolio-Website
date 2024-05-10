@@ -2,16 +2,10 @@
 import soai_logo from '../images/soai_logo.png';
 import gdg_logo from '../images/gdg_logo.png';
 import cse_logo from '../images/cse_logo.png';
+//import tf and html5 from images/icons
 import tf from '../images/icons/tf.png';
 import html5 from '../images/icons/html5.png';
-// import css react tailwindcss nodejs git 
-import css3 from '../images/icons/css3.png';
-import js from '../images/icons/js.png';
-import react from '../images/icons/react.png';
-import tailwindcss from '../images/icons/tailwindcss.png';
-import nodejs from '../images/icons/nodejs.png';
-import git from '../images/icons/git.png';
-import portfolioBackground from '../images/portfolioBackground.jpg'
+
 export const navLinks = [
   {
     id: "about",
@@ -36,12 +30,12 @@ export const services = [
 
 export const technologies = [
   { name: "HTML 5", icon: html5 },
-  { name: "CSS 3", icon: css3},
-  { name: "JavaScript", icon: js },
-  { name: "React JS", icon: react },
-  { name: "Tailwind CSS", icon: tailwindcss },
-  { name: "Node JS", icon: nodejs },
-  { name: "git", icon: git},
+  { name: "CSS 3", icon: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Tech/CSS.png" },
+  { name: "JavaScript", icon: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Tech/Javascript.png" },
+  { name: "React JS", icon: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Tech/ReactJS.png" },
+  { name: "Tailwind CSS", icon: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Tech/TailwindCSS.png" },
+  { name: "Node JS", icon: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Tech/NodeJS.png" },
+  { name: "git", icon: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Tech/Git.png" },
   { name: "TensorFlow", icon: tf },  
 
 ];
@@ -89,16 +83,16 @@ export const experiences = [
 
 export const projects = [
   {
-    name: "My Personal Portfolio",
+    name: "WeatherPedia",
     description:
-      "A digital showcase of my professional journey, skills, and accomplishments.",
+      "Web-based platform that allows users to access weather information for their location by entering it in the search field",
     tags: [
       { name: "Javascript", color: "blue-text-gradient" },
       { name: "HTML", color: "green-text-gradient" },
-      { name: "Tailwind", color: "pink-text-gradient" },
-      { name: "A fully designed and developed by me website", color: "yellow-text-gradient" },
+      { name: "bootstrap 5.3.0", color: "pink-text-gradient" },
+      { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
     ],
-    image: portfolioBackground,
+    image: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Projects/WeatherPedia.png",
     source_code_link: "https://github.com/lohitkolluri/WeatherPedia",
   },
   {

@@ -96,7 +96,7 @@ export const projects = [
       { name: "Javascript", color: "blue-text-gradient" },
       { name: "HTML", color: "green-text-gradient" },
       { name: "Tailwind", color: "pink-text-gradient" },
-      { name: "A fully designed and developed by me website", color: "yellow-text-gradient" },
+      { name: "A fully design and developed by me website", color: "yellow-text-gradient" },
     ],
     image: portfolioBackground,
     source_code_link: "https://github.com/lohitkolluri/WeatherPedia",

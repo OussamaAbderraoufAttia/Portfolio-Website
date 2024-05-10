@@ -11,7 +11,7 @@ import react from '../images/icons/react.png';
 import tailwindcss from '../images/icons/tailwindcss.png';
 import nodejs from '../images/icons/nodejs.png';
 import git from '../images/icons/git.png';
-import portfolioBackground from '../images/portfolioBackground.jpg'
+
 export const navLinks = [
   {
     id: "about",
@@ -89,16 +89,16 @@ export const experiences = [
 
 export const projects = [
   {
-    name: "My Personal Portfolio",
+    name: "WeatherPedia",
     description:
-      "A digital showcase of my professional journey, skills, and accomplishments.",
+      "Web-based platform that allows users to access weather information for their location by entering it in the search field",
     tags: [
       { name: "Javascript", color: "blue-text-gradient" },
       { name: "HTML", color: "green-text-gradient" },
-      { name: "Tailwind", color: "pink-text-gradient" },
-      { name: "A fully designed and developed by me website", color: "yellow-text-gradient" },
+      { name: "bootstrap 5.3.0", color: "pink-text-gradient" },
+      { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
     ],
-    image: portfolioBackground,
+    image: "https://lohitcdn.blob.core.windows.net/portfoliocdn/Projects/WeatherPedia.png",
     source_code_link: "https://github.com/lohitkolluri/WeatherPedia",
   },
   {

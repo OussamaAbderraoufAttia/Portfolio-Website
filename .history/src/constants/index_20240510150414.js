@@ -95,8 +95,8 @@ export const projects = [
     tags: [
       { name: "Javascript", color: "blue-text-gradient" },
       { name: "HTML", color: "green-text-gradient" },
-      { name: "Tailwind", color: "pink-text-gradient" },
-      { name: "A fully designed and developed by me website", color: "yellow-text-gradient" },
+      { name: "bootstrap 5.3.0", color: "pink-text-gradient" },
+      { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
     ],
     image: portfolioBackground,
     source_code_link: "https://github.com/lohitkolluri/WeatherPedia",

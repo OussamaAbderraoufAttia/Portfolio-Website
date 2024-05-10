@@ -8,10 +8,6 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
-  const openSourceCode = () => {
-    window.open(source_code_link, "_blank");
-  };
-
   return (
     <motion.div variants={fadeIn("up", "spring")}>
       <Tilt
@@ -30,14 +26,10 @@ const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              onClick={openSourceCode}
+              onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
-              <img
-                src={"https://lohitcdn.blob.core.windows.net/portfoliocdn/Etc/github.png"}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
+              <img src={"https://lohitcdn.blob.core.windows.net/portfoliocdn/Etc/github.png"} alt="source code" className="w-1/2 h-1/2 object-contain" />
             </div>
           </div>
         </div>
@@ -51,14 +43,6 @@ const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
               #{tag.name}
             </p>
           ))}
-        </div>
-        <div className="mt-4">
-        <button
-          onClick={openSourceCode}
-          className="bg-good-purple hover:bg-primary py-2 px-4 rounded-md text-white font-medium shadow-md transition duration-300 ease-in-out"
-        >
-          View Code
-        </button> 
         </div>
       </Tilt>
     </motion.div>

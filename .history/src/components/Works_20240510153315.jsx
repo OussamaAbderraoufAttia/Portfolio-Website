@@ -53,12 +53,12 @@ const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
           ))}
         </div>
         <div className="mt-4">
-        <button
-          onClick={openSourceCode}
-          className="bg-good-purple hover:bg-primary py-2 px-4 rounded-md text-white font-medium shadow-md transition duration-300 ease-in-out"
-        >
-          View Code
-        </button> 
+          <button
+            onClick={openSourceCode}
+            className="bg-tertiary py-2 px-4 rounded-md text-white font-medium shadow-md hover:bg-primary transition duration-300 ease-in-out"
+          >
+            View Code
+          </button>
         </div>
       </Tilt>
     </motion.div>
