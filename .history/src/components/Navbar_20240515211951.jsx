@@ -48,7 +48,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full flex items-center py-3 fixed top-0 z-20"> {/* Removed bg-primary */}
+      <nav className="w-full flex items-center py-3 fixed top-0 z-20">
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link
             to="/"
@@ -83,8 +83,10 @@ const Navbar = () => {
               />
             )}
             {/* Condensed navbar links */}
-            <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 ${toggle ? "flex bg-black bg-opacity-75" : "hidden"}`}>
-              {renderNavLinks(true)}
+            <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 ${toggle ? "flex" : "hidden"}`}>
+              <div className={`${toggle ? "bg-black bg-opacity-75 p-4 rounded-lg" : ""}`}>
+                {renderNavLinks(true)}
+              </div>
             </div>
           </div>
         </div>

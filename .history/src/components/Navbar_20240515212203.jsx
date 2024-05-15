@@ -40,15 +40,12 @@ const Navbar = () => {
       <li className="text-white hover:text-good-purple text-sm font-medium cursor-pointer">
         <button onClick={toggleResume}>Resume</button>
       </li>
-      <li className="text-white hover:text-good-purple text-sm font-medium cursor-pointer">
-        <button onClick={toggleLinkTree}>Find me online!</button>
-      </li>
     </ul>
   );
 
   return (
     <>
-      <nav className="w-full flex items-center py-3 fixed top-0 z-20"> {/* Removed bg-primary */}
+      <nav className="w-full flex items-center py-3 fixed top-0 z-20">
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link
             to="/"
@@ -85,6 +82,9 @@ const Navbar = () => {
             {/* Condensed navbar links */}
             <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 ${toggle ? "flex bg-black bg-opacity-75" : "hidden"}`}>
               {renderNavLinks(true)}
+              <div className="text-white hover:text-good-purple text-sm font-medium cursor-pointer">
+                <button onClick={toggleLinkTree}>Find me online!</button>
+              </div>
             </div>
           </div>
         </div>

@@ -83,7 +83,7 @@ const Navbar = () => {
               />
             )}
             {/* Condensed navbar links */}
-            <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 ${toggle ? "flex bg-black bg-opacity-75" : "hidden"}`}>
+            <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 ${toggle ? "flex bg-black bg-opacity-25" : "hidden"}`}>
               {renderNavLinks(true)}
             </div>
           </div>

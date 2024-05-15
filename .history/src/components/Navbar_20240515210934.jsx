@@ -48,7 +48,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full flex items-center py-3 fixed top-0 z-20"> {/* Removed bg-primary */}
+      <nav className="w-full flex items-center py-3 fixed top-0 z-20 bg-primary">
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link
             to="/"
@@ -83,12 +83,16 @@ const Navbar = () => {
               />
             )}
             {/* Condensed navbar links */}
-            <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 ${toggle ? "flex bg-black bg-opacity-75" : "hidden"}`}>
+            <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 ${toggle ? "flex" : "hidden"}`}>
               {renderNavLinks(true)}
             </div>
           </div>
         </div>
       </nav>
+      {/* Conditional mobile background */}
+      {toggle && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 z-10"></div>
+      )}
     </>
   );
 };

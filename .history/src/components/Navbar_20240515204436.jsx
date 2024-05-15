@@ -25,7 +25,7 @@ const Navbar = () => {
         <li
           key={link.id}
           className={`${
-            active === link.title && !isSecondary ? "text-white" : "text-white"
+            active === link.title ? "text-white" : isSecondary ? "text-secondary" : "text-white"
           } hover:text-good-purple text-sm font-medium cursor-pointer`}
           onClick={() => {
             setActive(link.title);
@@ -37,10 +37,10 @@ const Navbar = () => {
           <a href={`#${link.id}`}>{link.title}</a>
         </li>
       ))}
-      <li className="text-white hover:text-good-purple text-sm font-medium cursor-pointer">
+      <li className={`text-${isSecondary ? "secondary" : "white"} hover:text-good-purple text-sm font-medium cursor-pointer`}>
         <button onClick={toggleResume}>Resume</button>
       </li>
-      <li className="text-white hover:text-good-purple text-sm font-medium cursor-pointer">
+      <li className={`text-${isSecondary ? "secondary" : "white"} hover:text-good-purple text-sm font-medium cursor-pointer`}>
         <button onClick={toggleLinkTree}>Find me online!</button>
       </li>
     </ul>
@@ -48,7 +48,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full flex items-center py-3 fixed top-0 z-20"> {/* Removed bg-primary */}
+      <nav className="w-full flex items-center py-3 fixed top-0 z-20 bg-primary">
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link
             to="/"
@@ -58,7 +58,7 @@ const Navbar = () => {
               window.scrollTo(0, 0);
             }}
           >
-            <img src={OussamaImage} alt="logo" className="w-9 h-9 ml-2 object-contain rounded-full" />
+            <img src={OussamaImage} alt="logo" className="w-9 h-9 object-contain rounded-full" />
             <p className="text-white text-lg font-bold cursor-pointer flex">
               Oussama Abderraouf&nbsp;
               <span className="sm:block hidden">ATTIA</span>
@@ -71,19 +71,19 @@ const Navbar = () => {
               <img
                 src={closeIcon}
                 alt="close"
-                className="w-6 h-6 mr-2 object-contain cursor-pointer"
+                className="w-6 h-6 object-contain cursor-pointer"
                 onClick={() => setToggle(false)}
               />
             ) : (
               <img
-                src={menuIcon}
+                src= menuIcon}
                 alt="menu"
-                className="w-6 h-6 mr-2 object-contain cursor-pointer"
+                className="w-6 h-6 object-contain cursor-pointer"
                 onClick={() => setToggle(true)}
               />
             )}
             {/* Condensed navbar links */}
-            <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 ${toggle ? "flex bg-black bg-opacity-75" : "hidden"}`}>
+            <div className={`p-4 bg-gray-800 absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 rounded-xl ${toggle ? "flex" : "hidden"}`}>
               {renderNavLinks(true)}
             </div>
           </div>

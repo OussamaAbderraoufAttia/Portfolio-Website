@@ -19,19 +19,15 @@ const Navbar = () => {
     window.open(linkTree);
   };
 
-  const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? "flex sm:hidden" : "hidden sm:flex"} flex-row gap-6`}>
+  const renderNavLinks = () => (
+    <ul className="list-none">
       {navLinks.map((link) => (
         <li
           key={link.id}
-          className={`${
-            active === link.title && !isSecondary ? "text-white" : "text-white"
-          } hover:text-good-purple text-sm font-medium cursor-pointer`}
+          className={`text-white hover:text-good-purple text-sm font-medium cursor-pointer ${active === link.title ? "font-bold" : ""}`}
           onClick={() => {
             setActive(link.title);
-            if (isSecondary) {
-              setToggle(false);
-            }
+            setToggle(false);
           }}
         >
           <a href={`#${link.id}`}>{link.title}</a>
@@ -48,7 +44,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full flex items-center py-3 fixed top-0 z-20"> {/* Removed bg-primary */}
+      <nav className="w-full flex items-center py-3 fixed top-0 z-20 bg-primary">
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link
             to="/"
@@ -64,31 +60,24 @@ const Navbar = () => {
               <span className="sm:block hidden">ATTIA</span>
             </p>
           </Link>
-          {renderNavLinks(false)}
           <div className="sm:hidden flex flex-1 justify-end items-center">
-            {/* Toggle button */}
-            {toggle ? (
-              <img
-                src={closeIcon}
-                alt="close"
-                className="w-6 h-6 mr-2 object-contain cursor-pointer"
-                onClick={() => setToggle(false)}
-              />
-            ) : (
-              <img
-                src={menuIcon}
-                alt="menu"
-                className="w-6 h-6 mr-2 object-contain cursor-pointer"
-                onClick={() => setToggle(true)}
-              />
-            )}
-            {/* Condensed navbar links */}
-            <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 ${toggle ? "flex bg-black bg-opacity-75" : "hidden"}`}>
-              {renderNavLinks(true)}
-            </div>
+            <img
+              src={toggle ? closeIcon : menuIcon}
+              alt="toggle"
+              className="w-6 h-6 mr-2 object-contain cursor-pointer"
+              onClick={() => setToggle(!toggle)}
+            />
           </div>
         </div>
       </nav>
+      {/* Vertical Navbar */}
+      {toggle && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-30">
+          <div className="bg-white p-4 rounded-md shadow-md">
+            {renderNavLinks()}
+          </div>
+        </div>
+      )}
     </>
   );
 };
