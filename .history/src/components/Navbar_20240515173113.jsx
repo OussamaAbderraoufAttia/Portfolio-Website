@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const toggleResume = () => {
-    const resumeUrl = "https://drive.google.com/file/d/1WeHR-sPqeZHGi3y1qQy-EFfdDWj6-o8W/view";
+    const resumeUrl = "https://drive.google.com/file/d/1LtEQqRJ6WZnt5FXoL7ZkZPf90XKmbKHM/view";
     window.open(resumeUrl);
   };
   const togglelinkTree = () => {
@@ -46,7 +46,7 @@ const Navbar = () => {
       </li>
 
       <li className={`text-${isSecondary ? "secondary" : "white"} hover:text-white text-[20px] font-medium cursor-pointer`}>
-        <button onClick={togglelinkTree}>Find me online!</button>
+        <button onClick={togglelinkTree}>Fine me online!</button>
       </li>
     </ul>
   );

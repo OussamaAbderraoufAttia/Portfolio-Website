@@ -1,3 +1,4 @@
+// ComputersCanvas.jsx
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
@@ -38,8 +39,10 @@ const ComputerModel = () => {
 };
 
 const ComputersCanvas = () => {
+  const isMobile = window.innerWidth < 768; // Adjust threshold as needed
+
   return (
-    <div style={{ width: "100%", height: "100%" }}>
+    <div style={{ width: "100%", height: isMobile ? "100vh" : "600px", overflow: "hidden" }}>
       <Canvas
         frameloop="demand"
         shadows

@@ -1,7 +1,16 @@
 import { BrowserRouter } from "react-router-dom";
 import React from "react";
-import { About, Contact, Experience, Hero, Navbar, Works, StarsCanvas, Services, Tech } from "./components";
-import { isMobile } from "react-device-detect";
+import {
+  About,
+  Contact,
+  Experience,
+  Hero,
+  Navbar,
+  Tech,
+  Works,
+  StarsCanvas,
+  Services,
+} from "./components";
 
 const App = () => {
   return (
@@ -13,8 +22,8 @@ const App = () => {
         </div>
         <About />
         <Experience />
-        {!isMobile && <Tech />} {/* Conditionally render Tech only if not mobile */}
-        {!isMobile && <Services />} {/* Conditionally render Services only if not mobile */}
+        <Tech />
+        <Services />
         <Works />
         <div className="relative z-0">
           <Contact />

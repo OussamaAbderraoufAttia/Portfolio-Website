@@ -4,7 +4,7 @@ import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import Typewriter from "typewriter-effect";
 import { isMobile } from "react-device-detect";
-import earth from "../images/earth.svg";
+import earth from "../assets/earth.svg";
 
 const Hero = () => {
   return (
@@ -45,8 +45,7 @@ const Hero = () => {
       {!isMobile && <ComputersCanvas />}
       {/* Mobile-Specific Animated Earth */}
       {isMobile && (
-        
-        <motion.div className="absolute inset-0 flex justify-center items-center mt-32">
+        <motion.div className="absolute inset-0 flex justify-center items-center">
           <motion.div
             animate={{
               rotate: 360,
@@ -57,7 +56,7 @@ const Hero = () => {
               repeat: Infinity,
             }}
           >
-            <img src={earth} alt="Earth" className="w-64 h-64" />
+            <img src={earth} alt="Earth" className="w-32 h-32" />
           </motion.div>
         </motion.div>
       )}

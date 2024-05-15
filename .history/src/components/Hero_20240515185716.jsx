@@ -4,7 +4,6 @@ import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import Typewriter from "typewriter-effect";
 import { isMobile } from "react-device-detect";
-import earth from "../images/earth.svg";
 
 const Hero = () => {
   return (
@@ -43,22 +42,25 @@ const Hero = () => {
       </div>
       {/* Conditional Rendering for Desktop Content */}
       {!isMobile && <ComputersCanvas />}
-      {/* Mobile-Specific Animated Earth */}
+      {/* Mobile-Specific Animated Element */}
       {isMobile && (
-        
-        <motion.div className="absolute inset-0 flex justify-center items-center mt-32">
-          <motion.div
-            animate={{
-              rotate: 360,
-            }}
-            transition={{
-              duration: 60, // Rotate once every 60 seconds
-              ease: "linear",
-              repeat: Infinity,
-            }}
-          >
-            <img src={earth} alt="Earth" className="w-64 h-64" />
-          </motion.div>
+        <motion.div
+          className="absolute bottom-20 left-0 right-0 mx-auto"
+          animate={{
+            scale: [1, 1.2, 1],
+            rotate: [0, 360, 0],
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            times: [0, 0.5, 1],
+            loop: Infinity,
+            repeatDelay: 1,
+          }}
+        >
+          <div className="bg-[#915EFF] rounded-full w-16 h-16 flex items-center justify-center">
+            <span className="text-white font-bold text-2xl">👋</span>
+          </div>
         </motion.div>
       )}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">

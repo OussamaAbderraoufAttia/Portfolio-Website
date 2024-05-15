@@ -52,12 +52,12 @@ const Hero = () => {
               rotate: 360,
             }}
             transition={{
-              duration: 60, // Rotate once every 60 seconds
+              duration: 30, // Rotate once every 60 seconds
               ease: "linear",
               repeat: Infinity,
             }}
           >
-            <img src={earth} alt="Earth" className="w-64 h-64" />
+            <img src={earth} alt="Earth" className="w-108 h-108" />
           </motion.div>
         </motion.div>
       )}

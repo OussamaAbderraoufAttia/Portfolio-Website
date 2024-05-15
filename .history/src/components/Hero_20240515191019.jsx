@@ -12,7 +12,7 @@ const Hero = () => {
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
-        <div className="flex flex-col justify-center items-center mt-5">
+        <div className="flex flex-col justify-center items-center mt-5 position-relative"> {/* Added position-relative */}
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
@@ -40,13 +40,22 @@ const Hero = () => {
             />
           </p>
         </div>
+        <img // Added image element with absolute positioning
+          src={earth}
+          alt="Earth"
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-256 h-256"
+        />
       </div>
       {/* Conditional Rendering for Desktop Content */}
       {!isMobile && <ComputersCanvas />}
       {/* Mobile-Specific Animated Earth */}
       {isMobile && (
-        
-        <motion.div className="absolute inset-0 flex justify-center items-center mt-32">
+        <motion.div
+          className="absolute inset-0 flex justify-center items-center cursor-pointer"
+          onClick={() => console.log("Ripple clicked")}
+          whileTap={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 500, damping: 30 }}
+        >
           <motion.div
             animate={{
               rotate: 360,
@@ -57,7 +66,7 @@ const Hero = () => {
               repeat: Infinity,
             }}
           >
-            <img src={earth} alt="Earth" className="w-64 h-64" />
+            <img src={earth} alt="Earth" className="w-256 h-256" />
           </motion.div>
         </motion.div>
       )}

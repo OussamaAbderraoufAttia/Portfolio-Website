@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const toggleResume = () => {
-    const resumeUrl = "https://drive.google.com/file/d/1WeHR-sPqeZHGi3y1qQy-EFfdDWj6-o8W/view";
+    const resumeUrl = "https://drive.google.com/file/d/1LtEQqRJ6WZnt5FXoL7ZkZPf90XKmbKHM/view";
     window.open(resumeUrl);
   };
   const togglelinkTree = () => {

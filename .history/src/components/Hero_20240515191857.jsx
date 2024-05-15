@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
@@ -7,6 +7,8 @@ import { isMobile } from "react-device-detect";
 import earth from "../images/earth.svg";
 
 const Hero = () => {
+  const [rotationSpeed, setRotationSpeed] = useState(360); // Initial rotation speed
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -45,11 +47,13 @@ const Hero = () => {
       {!isMobile && <ComputersCanvas />}
       {/* Mobile-Specific Animated Earth */}
       {isMobile && (
-        
-        <motion.div className="absolute inset-0 flex justify-center items-center mt-32">
+        <motion.div
+          className="absolute inset-0 flex justify-center items-center mt-32"
+          onClick={() => setRotationSpeed(rotationSpeed * 2)} // Double rotation speed on click
+        >
           <motion.div
             animate={{
-              rotate: 360,
+              rotate: rotationSpeed,
             }}
             transition={{
               duration: 60, // Rotate once every 60 seconds
@@ -57,7 +61,7 @@ const Hero = () => {
               repeat: Infinity,
             }}
           >
-            <img src={earth} alt="Earth" className="w-64 h-64" />
+            <img src={earth} alt="Earth" className="w-72 h-72" />
           </motion.div>
         </motion.div>
       )}

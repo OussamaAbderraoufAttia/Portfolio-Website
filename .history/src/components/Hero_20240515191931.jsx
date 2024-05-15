@@ -57,7 +57,7 @@ const Hero = () => {
               repeat: Infinity,
             }}
           >
-            <img src={earth} alt="Earth" className="w-64 h-64" />
+            <img src={earth} alt="Earth" className="w-108 h-108" />
           </motion.div>
         </motion.div>
       )}

@@ -45,8 +45,18 @@ const Hero = () => {
       {!isMobile && <ComputersCanvas />}
       {/* Mobile-Specific Animated Earth */}
       {isMobile && (
-        
-        <motion.div className="absolute inset-0 flex justify-center items-center mt-32">
+        <motion.div
+          className="absolute inset-0 flex justify-center items-center"
+          animate={{
+            scale: [1, 1.1, 1.1, 1],
+          }}
+          transition={{
+            duration: 60, // Scale up once every 60 seconds
+            ease: "linear",
+            repeat: Infinity,
+          }}
+        >
+        <motion.div className="absolute inset-0 flex justify-center items-center">
           <motion.div
             animate={{
               rotate: 360,

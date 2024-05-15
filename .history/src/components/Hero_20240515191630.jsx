@@ -46,7 +46,7 @@ const Hero = () => {
       {/* Mobile-Specific Animated Earth */}
       {isMobile && (
         
-        <motion.div className="absolute inset-0 flex justify-center items-center mt-32">
+        <motion.div className="absolute inset-0 flex justify-center items-center mt-8">
           <motion.div
             animate={{
               rotate: 360,

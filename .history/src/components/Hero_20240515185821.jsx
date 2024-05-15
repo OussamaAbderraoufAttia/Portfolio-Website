@@ -4,7 +4,6 @@ import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import Typewriter from "typewriter-effect";
 import { isMobile } from "react-device-detect";
-import earth from "../images/earth.svg";
 
 const Hero = () => {
   return (
@@ -43,24 +42,58 @@ const Hero = () => {
       </div>
       {/* Conditional Rendering for Desktop Content */}
       {!isMobile && <ComputersCanvas />}
-      {/* Mobile-Specific Animated Earth */}
-      {isMobile && (
-        
-        <motion.div className="absolute inset-0 flex justify-center items-center mt-32">
-          <motion.div
-            animate={{
-              rotate: 360,
-            }}
-            transition={{
-              duration: 60, // Rotate once every 60 seconds
-              ease: "linear",
-              repeat: Infinity,
-            }}
-          >
-            <img src={earth} alt="Earth" className="w-64 h-64" />
-          </motion.div>
-        </motion.div>
-      )}
+      {/* Mobile-Specific Animated Element */}
+      {/* Mobile-Specific Animated Element */}
+{isMobile && (
+  <motion.div
+    className="absolute bottom-20 left-0 right-0 mx-auto"
+    animate={{
+      y: [-100, 100],
+      rotate: [0, 360],
+      scale: [1, 1.5, 1],
+    }}
+    transition={{
+      duration: 3,
+      ease: "easeInOut",
+      times: [0, 0.5, 1],
+      loop: Infinity,
+      repeatDelay: 1,
+    }}
+  >
+    <div className="relative w-32 h-32">
+      <motion.div
+        className="absolute inset-0 bg-[#915EFF] rounded-full"
+        animate={{
+          rotate: 360,
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 2,
+          ease: "easeInOut",
+          times: [0, 0.5, 1],
+          loop: Infinity,
+          repeatDelay: 0.5,
+        }}
+      />
+      <motion.div
+        className="absolute inset-0 flex items-center justify-center"
+        animate={{
+          rotate: [-360, 360],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 3,
+          ease: "easeInOut",
+          times: [0, 0.5, 1],
+          loop: Infinity,
+          repeatDelay: 1,
+        }}
+      >
+        <span className="text-white font-bold text-4xl">⚡</span>
+      </motion.div>
+    </div>
+  </motion.div>
+)}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">

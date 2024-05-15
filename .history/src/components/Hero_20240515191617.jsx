@@ -45,22 +45,29 @@ const Hero = () => {
       {!isMobile && <ComputersCanvas />}
       {/* Mobile-Specific Animated Earth */}
       {isMobile && (
-        
-        <motion.div className="absolute inset-0 flex justify-center items-center mt-32">
-          <motion.div
-            animate={{
-              rotate: 360,
-            }}
-            transition={{
-              duration: 60, // Rotate once every 60 seconds
-              ease: "linear",
-              repeat: Infinity,
-            }}
-          >
-            <img src={earth} alt="Earth" className="w-64 h-64" />
-          </motion.div>
-        </motion.div>
-      )}
+  <div className="mt-64"> {/* Add margin-top for space */}
+    <motion.div
+      className="flex justify-center items-center cursor-pointer"
+      onClick={() => console.log("Ripple clicked")}
+      whileTap={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 500, damping: 30 }}
+    >
+      <motion.div
+        animate={{
+          rotate: 360,
+        }}
+        transition={{
+          duration: 60, // Rotate once every 60 seconds
+          ease: "linear",
+          repeat: Infinity,
+        }}
+      >
+        <img src={earth} alt="Earth" className="w-64 h-64" />
+      </motion.div>
+    </motion.div>
+  </div>
+)}
+
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">

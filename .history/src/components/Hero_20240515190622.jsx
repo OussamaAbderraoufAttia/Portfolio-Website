@@ -14,7 +14,23 @@ const Hero = () => {
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+          {/* Animated Earth SVG for Mobile */}
+          {isMobile && (
+            <motion.div
+              animate={{
+                rotate: 360,
+              }}
+              transition={{
+                duration: 60, // Rotate once every 60 seconds
+                ease: "linear",
+                repeat: Infinity,
+              }}
+            >
+              <img src={earth} alt="Earth" className="w-20 h-20" />
+            </motion.div>
+          )}
+          {/* Static Gradient Circle for Desktop */}
+          {!isMobile && <div className="w-1 sm:h-80 h-40 violet-gradient" />}
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
@@ -43,22 +59,20 @@ const Hero = () => {
       </div>
       {/* Conditional Rendering for Desktop Content */}
       {!isMobile && <ComputersCanvas />}
-      {/* Mobile-Specific Animated Earth */}
+      {/* Mobile-Specific Ripple Effect */}
       {isMobile && (
-        
-        <motion.div className="absolute inset-0 flex justify-center items-center mt-32">
+        <motion.div
+          className="absolute inset-0 flex justify-center items-center cursor-pointer"
+          onClick={() => console.log("Ripple clicked")}
+          whileTap={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 500, damping: 30 }}
+        >
           <motion.div
-            animate={{
-              rotate: 360,
-            }}
-            transition={{
-              duration: 60, // Rotate once every 60 seconds
-              ease: "linear",
-              repeat: Infinity,
-            }}
-          >
-            <img src={earth} alt="Earth" className="w-64 h-64" />
-          </motion.div>
+            className="bg-[#915EFF] rounded-full w-8 h-8"
+            animate={{ scale: 1.5 }}
+            initial={{ scale: 0 }}
+            transition={{ delay: 0.5, type: "spring", stiffness: 300, damping: 20 }}
+          />
         </motion.div>
       )}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">

@@ -45,8 +45,12 @@ const Hero = () => {
       {!isMobile && <ComputersCanvas />}
       {/* Mobile-Specific Animated Earth */}
       {isMobile && (
-        
-        <motion.div className="absolute inset-0 flex justify-center items-center mt-32">
+        <motion.div
+          className="absolute inset-0 flex justify-center items-center cursor-pointer"
+          onClick={() => console.log("Ripple clicked")}
+          whileTap={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 500, damping: 30 }}
+        >
           <motion.div
             animate={{
               rotate: 360,
@@ -57,7 +61,7 @@ const Hero = () => {
               repeat: Infinity,
             }}
           >
-            <img src={earth} alt="Earth" className="w-64 h-64" />
+            <img src={earth} alt="Earth" className="w-512 h-512" />
           </motion.div>
         </motion.div>
       )}
