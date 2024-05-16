@@ -4,6 +4,7 @@ import { navLinks } from "../constants";
 import OussamaImage from '../images/Oussama.jpg';
 import closeIcon from '../images/X.svg';
 import menuIcon from '../images/menu.svg';
+import noiseBackground from '../images/noise.png'; // Assuming you have this image
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -48,8 +49,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed w-full flex items-center py-3 top-0 z-20 bg-primary">
-        <div className="w-full flex justify-between items-center max-w-7xl mx-auto relative z-10">
+      <nav className="w-full flex items-center py-3 fixed top-0 z-20 bg-black bg-opacity-75" style={{ backgroundImage: `url(${noiseBackground})`, backgroundBlendMode: 'overlay' }}>
+        <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link
             to="/"
             className="flex items-center gap-2"
@@ -60,7 +61,8 @@ const Navbar = () => {
           >
             <img src={OussamaImage} alt="logo" className="w-9 h-9 ml-2 object-contain rounded-full" />
             <p className="text-white text-lg font-bold cursor-pointer flex">
-              Oussama Abderraouf ATTIA 
+              Oussama Abderraouf&nbsp;
+              <span className="sm:block hidden">ATTIA</span>
             </p>
           </Link>
           {renderNavLinks(false)}
@@ -82,7 +84,7 @@ const Navbar = () => {
               />
             )}
             {/* Condensed navbar links */}
-            <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[150px] z-10 bg-primary ${toggle ? "flex flex-col items-center" : "hidden"}`}>
+            <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[150px] z-10 bg-black bg-opacity-75 rounded-lg ${toggle ? "flex flex-col items-center" : "hidden"}`} style={{ backgroundImage: `url(${noiseBackground})`, backgroundBlendMode: 'overlay' }}>
               {renderNavLinks(true)}
             </div>
           </div>

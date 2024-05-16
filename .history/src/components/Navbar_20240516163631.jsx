@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import OussamaImage from '../images/Oussama.jpg';
@@ -8,6 +8,7 @@ import menuIcon from '../images/menu.svg';
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleResume = () => {
     const resumeUrl = "https://drive.google.com/file/d/1WeHR-sPqeZHGi3y1qQy-EFfdDWj6-o8W/view";
@@ -19,14 +20,32 @@ const Navbar = () => {
     window.open(linkTree);
   };
 
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 200 ) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  })
+
+  let navbarClasses = ['navbar'];
+  if (scrolled) {
+    navbarClasses.push('scrolled');
+  }
+
   const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? "flex flex-col gap-4" : "hidden sm:flex flex-row gap-6"}`}>
+    <ul className={`list-none ${isSecondary ? "flex flex-col gap-4 text-lg" : "hidden sm:flex flex-row gap-6 text-sm"}`}>
       {navLinks.map((link) => (
         <li
           key={link.id}
           className={`${
             active === link.title && !isSecondary ? "text-white" : "text-white"
-          } hover:text-good-purple text-sm font-medium cursor-pointer`}
+          } hover:text-good-purple font-medium cursor-pointer`}
           onClick={() => {
             setActive(link.title);
             if (isSecondary) {
@@ -37,10 +56,10 @@ const Navbar = () => {
           <a href={`#${link.id}`}>{link.title}</a>
         </li>
       ))}
-      <li className="text-white hover:text-good-purple text-sm font-medium cursor-pointer">
+      <li className="text-white hover:text-good-purple font-medium cursor-pointer">
         <button onClick={toggleResume}>Resume</button>
       </li>
-      <li className="text-white hover:text-good-purple text-sm font-medium cursor-pointer">
+      <li className="text-white hover:text-good-purple font-medium cursor-pointer">
         <button onClick={toggleLinkTree}>Find me online!</button>
       </li>
     </ul>
@@ -48,7 +67,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed w-full flex items-center py-3 top-0 z-20 bg-primary">
+      <nav className={navbarClasses.join(" ")}>
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto relative z-10">
           <Link
             to="/"
@@ -60,7 +79,8 @@ const Navbar = () => {
           >
             <img src={OussamaImage} alt="logo" className="w-9 h-9 ml-2 object-contain rounded-full" />
             <p className="text-white text-lg font-bold cursor-pointer flex">
-              Oussama Abderraouf ATTIA 
+              Oussama Abderraouf  
+              <span className="sm:block hidden"> ATTIA</span>
             </p>
           </Link>
           {renderNavLinks(false)}
@@ -82,7 +102,7 @@ const Navbar = () => {
               />
             )}
             {/* Condensed navbar links */}
-            <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[150px] z-10 bg-primary ${toggle ? "flex flex-col items-center" : "hidden"}`}>
+            <div className={`p-4 absolute top-14 right-0 mx-2 my-2 min-w-[150px] z-10 ${toggle ? "flex flex-col items-center" : "hidden"}`}>
               {renderNavLinks(true)}
             </div>
           </div>

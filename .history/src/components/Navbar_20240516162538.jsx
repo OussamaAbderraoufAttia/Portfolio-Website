@@ -61,6 +61,7 @@ const Navbar = () => {
             <img src={OussamaImage} alt="logo" className="w-9 h-9 ml-2 object-contain rounded-full" />
             <p className="text-white text-lg font-bold cursor-pointer flex">
               Oussama Abderraouf ATTIA 
+              <span className="sm:block hidden">ATTIA</span>
             </p>
           </Link>
           {renderNavLinks(false)}
